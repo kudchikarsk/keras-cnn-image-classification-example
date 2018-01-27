@@ -1,0 +1,5 @@
+train_/*
+val_data/*
+train_data/*
+*.zip
+*.ZIP
