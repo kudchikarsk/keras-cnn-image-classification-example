@@ -37,12 +37,12 @@ train_datagen = ImageDataGenerator(
 test_datagen = ImageDataGenerator(rescale=1./255)
 
 train_generator = train_datagen.flow_from_directory(
-        '/input/train_data',
+        './../train_data',
         target_size=(img_rows, img_cols),
         batch_size=batch_size)
 
 validation_generator = test_datagen.flow_from_directory(
-        '/input/val_data',
+        './../val_data',
         target_size=(img_rows, img_cols),
         batch_size=batch_size)
 
