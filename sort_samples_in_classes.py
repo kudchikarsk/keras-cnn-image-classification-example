@@ -29,7 +29,7 @@ def load_data(df,src_folder,des_folder):
     row_len=df.shape[0]    
     for i in range(row_len):
         copy_to_target_path(df.image_name[i],df.detected[i],src_folder,des_folder)
-		print (str(i+1)+"/"+str(row_len)+" copied!", end="\r")
+        print (str(i+1)+"/"+str(row_len)+" copied!", end="\r")
 
 
 load_data(train[:sep],IMAGE_FOLDER,TRAIN_FOLDER)
