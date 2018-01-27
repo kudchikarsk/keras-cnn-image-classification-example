@@ -29,7 +29,7 @@ set_image_data_format("channels_first")
 batch_size = 32
 
 # input image dimensions
-img_rows, img_cols = 500, 500
+img_rows, img_cols = 256, 256
 
 train_datagen = ImageDataGenerator(
         rescale=1./255)
