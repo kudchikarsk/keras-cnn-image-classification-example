@@ -6,12 +6,11 @@
 import os
 import pandas as pd
 from shutil import copyfile
-from IPython.display import clear_output
 
-TRAIN_FILENAME="./../Dataset/train.csv"
-IMAGE_FOLDER="./../Dataset/train_"
-TRAIN_FOLDER="./../Dataset/train_data"
-VAL_FOLDER="./../Dataset/val_data"
+TRAIN_FILENAME="./../train.csv"
+IMAGE_FOLDER="./../train_"
+TRAIN_FOLDER="./../train_data"
+VAL_FOLDER="./../val_data"
 
 train=pd.read_csv(TRAIN_FILENAME)
 train.head()
@@ -30,8 +29,7 @@ def load_data(df,src_folder,des_folder):
     row_len=df.shape[0]    
     for i in range(row_len):
         copy_to_target_path(df.image_name[i],df.detected[i],src_folder,des_folder)
-        clear_output(wait=True)
-        print(str(i+1)+"/"+str(row_len)+" copied!")
+		print (str(i+1)+"/"+str(row_len)+" copied!", end="\r")
 
 
 load_data(train[:sep],IMAGE_FOLDER,TRAIN_FOLDER)
